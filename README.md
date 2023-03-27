@@ -10,25 +10,33 @@ This is a simple image processing app that allows users to load, display, modify
 The app uses a class called ImageFormat to store image data in a single object. The ImageFormat class has the following attributes:
 
 
-`width (integer):`the width of the image in pixels
+`width (integer):` the width of the image in pixels
 
-`height (integer):`the height of the image in pixels
+`height (integer):` the height of the image in pixels
 
-`encoding_type (string):`the encoding type of the image (either "color" or "grayscale")
+`encoding_type (string):` the encoding type of the image (either "color" or "grayscale")
 
-`pixel_values (NumPy array):`a 2D NumPy array that contains the pixel values of the image
+`pixel_values (NumPy array):` a 2D NumPy array that contains the pixel values of the image
 
 
 The app has the following functions:
 
-`load_image():`allows the user to select an image file and returns an ImageFormat object that contains the image data
-`show_image(image_format):`displays the image in a new window using tkinter
-`save_image(image_format):`allows the user to save the image to a file in the format created by us (MFG)
-`display_histogram(image_format):`displays the histogram of the image using matplotlib
-`brightness_change(image_format):`allows the user to change the brightness of the image by adding a constant value to each pixel
-`contrast_around_mean(image_format):`allows the user to change the contrast of the image by multiplying each pixel value by a constant value
-`histogram_equalization(image_format):`performs histogram equalization on the image
-`gamma_correction(image_format):`performs gamma correction on the image by raising each pixel value to a power
+`load_image():` allows the user to select an image file and returns an ImageFormat object that contains the image data
+
+`show_image(image_format):` displays the image in a new window using tkinter
+
+`save_image(image_format):` allows the user to save the image to a file in the format created by us (MFG)
+
+`display_histogram(image_format):` displays the histogram of the image using matplotlib
+
+`brightness_change(image_format):` allows the user to change the brightness of the image by adding a constant value to each pixel
+
+`contrast_around_mean(image_format):` allows the user to change the contrast of the image by multiplying each pixel value by a constant value
+
+`histogram_equalization(image_format):` performs histogram equalization on the image
+
+`gamma_correction(image_format):` performs gamma correction on the image by raising each pixel value to a power
+
 
 The main function of the app displays a menu that allows the user to select the different functions. The user can select an option by entering the corresponding number. The main function uses a while loop to keep displaying the menu until the user chooses to exit.
 
