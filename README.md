@@ -36,11 +36,11 @@ Open a terminal window and navigate to the directory where the repository is clo
 
 Install the required libraries by running the following command:
 
-## pip install numpy tkinter pillow matplotlib
+`pip3 install numpy tkinter pillow matplotlib`
 
 Run the app by running the following command:
 
-## python3 image-editor-mgf.py
+`python3 image-editor-mgf.py`
 
 Follow the instructions in the app to load, display, modify, and save image files.
 
