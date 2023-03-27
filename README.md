@@ -1,4 +1,4 @@
-## Image Processing App
+# Image Processing App
 
 This is a simple image processing app that allows users to load, display, modify, and save image files. The app is built using Python and the following libraries:
 
@@ -26,7 +26,7 @@ gamma_correction(image_format): performs gamma correction on the image by raisin
 
 The main function of the app displays a menu that allows the user to select the different functions. The user can select an option by entering the corresponding number. The main function uses a while loop to keep displaying the menu until the user chooses to exit.
 
-## How to Run the script
+# How to Run the script
 
 To run the app, follow these steps:
 
@@ -36,17 +36,17 @@ Open a terminal window and navigate to the directory where the repository is clo
 
 Install the required libraries by running the following command:
 
-# pip install numpy tkinter pillow matplotlib
+## pip install numpy tkinter pillow matplotlib
 
 Run the app by running the following command:
 
-# python3 image-editor-mgf.py
+## python3 image-editor-mgf.py
 
 Follow the instructions in the app to load, display, modify, and save image files.
 
 Note: The app has been tested on Python 3.7.3 and may not work on earlier versions of Python.
 
-## Example Usage
+# Example Usage
 
 Here is an example usage of the app:
 
