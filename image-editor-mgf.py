@@ -39,18 +39,19 @@ def show_image(image_format):
 # Function to save image to file using PIL
 def save_image(image_format):
     # Save the image in the format created by us (MFG)
-    file_path = filedialog.asksaveasfilename(defaultextension=".mfg")
-    # If file path is not empty, save the image in the file
-    if file_path:
-        pixel_values = image_format.pixel_values
+    file_path = filedialog.asksaveasfilename(defaultextension=".mfg", filetypes=[("MFG Files", "*.mfg")])
+    
+    with open(file_path, 'wb') as f:
+        # Write the image dimensions
+        f.write(image_format.width.to_bytes(4, byteorder='little'))
+        f.write(image_format.height.to_bytes(4, byteorder='little'))
+        # Write the encoding type
         if image_format.encoding_type == "color":
-            # Convert image to RGB if it is in grayscale
-            pixel_values = pixel_values.astype(np.uint8)
+            f.write(b'color')
         else:
-            # Convert image to grayscale if it is in color
-            pixel_values = pixel_values.astype(np.uint8).reshape(image_format.height, image_format.width)
-        image = Image.fromarray(pixel_values)
-        image.save(file_path)
+            f.write(b'grayscale')
+        # Write the pixel values
+        f.write(image_format.pixel_values.tobytes())
 
 # Function to display histogram of image using matplotlib
 def display_histogram(image_format):
