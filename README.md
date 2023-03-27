@@ -11,9 +11,13 @@ The app uses a class called ImageFormat to store image data in a single object. 
 
 
 `width (integer):`the width of the image in pixels
+
 `height (integer):`the height of the image in pixels
+
 `encoding_type (string):`the encoding type of the image (either "color" or "grayscale")
+
 `pixel_values (NumPy array):`a 2D NumPy array that contains the pixel values of the image
+
 
 The app has the following functions:
 
